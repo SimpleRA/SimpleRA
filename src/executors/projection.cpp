@@ -59,7 +59,7 @@ void executePROJECTION()
     {
         columnIndices.emplace_back(table.getColumnIndex(parsedQuery.projectionColumnList[columnCounter]));
     }
-    vector<int> row = table.getNext(cursor);
+    vector<int> row = cursor.getNext();
     vector<int> resultantRow(columnIndices.size(), 0);
 
     while (!row.empty())
@@ -70,7 +70,7 @@ void executePROJECTION()
             resultantRow[columnCounter] = row[columnIndices[columnCounter]];
         }
         resultantTable->writeRow<int>(resultantRow);
-        row = table.getNext(cursor);
+        row = cursor.getNext();
     }
     resultantTable->blockify();
     tableCatalogue.insertTable(resultantTable);

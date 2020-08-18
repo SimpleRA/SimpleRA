@@ -111,7 +111,7 @@ void executeSELECTION()
     Table* resultantTable = new Table(parsedQuery.selectionResultRelationName, table.columns);
     resultantTable->writeRow<string>(resultantTable -> columns);
     Cursor cursor = table.getCursor();
-    vector<int> row = table.getNext(cursor);
+    vector<int> row = cursor.getNext();
     int firstColumnIndex = table.getColumnIndex(parsedQuery.selectionFirstColumnName);
     int secondColumnIndex;
     if (parsedQuery.selectType == COLUMN)
@@ -127,7 +127,7 @@ void executeSELECTION()
             value2 = row[secondColumnIndex];
         if (evaluateBinOp(value1, value2, parsedQuery.selectionBinaryOperator))
             resultantTable->writeRow<int>(row);
-        row = table.getNext(cursor);
+        row = cursor.getNext();
     }
     if(resultantTable->blockify())
         tableCatalogue.insertTable(resultantTable);

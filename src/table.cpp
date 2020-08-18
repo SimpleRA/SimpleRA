@@ -228,7 +228,7 @@ void Table::print()
     vector<int> row;
     for (int rowCounter = 0; rowCounter < count; rowCounter++)
     {
-        row = this->getNext(cursor);
+        row = cursor.getNext();
         this->writeRow(row, cout);
     }
     printRowCount(this->rowCount);
@@ -243,21 +243,14 @@ void Table::print()
  * @param cursor 
  * @return vector<int> 
  */
-vector<int> Table::getNext(Cursor& cursor)
+void Table::getNextPage(Cursor *cursor)
 {
     logger.log("Table::getNext");
-    vector<int> row;
-    row = cursor.getNext();
 
-    if (row.empty())
-    {
-        if (cursor.pageIndex < this->blockCount - 1)
+        if (cursor->pageIndex < this->blockCount - 1)
         {
-            cursor.nextPage(cursor.pageIndex+1);
-            row = cursor.getNext();
+            cursor->nextPage(cursor->pageIndex+1);
         }
-    }
-    return row;
 }
 
 
@@ -282,7 +275,7 @@ void Table::makePermanent()
     vector<int> row;
     for (int rowCounter = 0; rowCounter < this->rowCount; rowCounter++)
     {
-        row = this->getNext(cursor);
+        row = cursor.getNext();
         this->writeRow(row, fout);
     }
     fout.close();

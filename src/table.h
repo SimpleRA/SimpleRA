@@ -46,7 +46,7 @@ public:
     void print();
     void makePermanent();
     bool isPermanent();
-    vector<int> getNext(Cursor &cursor);
+    void getNextPage(Cursor *cursor);
     Cursor getCursor();
     int getColumnIndex(string columnName);
     void unload();
