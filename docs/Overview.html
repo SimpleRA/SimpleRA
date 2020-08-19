@@ -97,7 +97,7 @@ Run: <code>LOAD B</code>, <code>LIST TABLES</code></p>
 <li>Naturally &lt;table_name&gt; should be a loaded table in the system and &lt;fromColumnName&gt; should be an exsiting column in the table</li>
 <li>&lt;toColumnName&gt; should not be another column in the table</li>
 </ul>
-<p>Run: <code>RENAME B TO C FROM B</code></p>
+<p>Run: <code>RENAME b TO c FROM B</code></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-class="invert" data-background-color="black" data-theme="gaia" class="invert" style="--class:invert;--background-color:black;--theme:gaia;background-color:black;background-image:none;">
 <h3>EXPORT</h3>
@@ -202,8 +202,8 @@ Run: <code>LOAD B</code>, <code>LIST TABLES</code></p>
 <ul>
 <li>The selection command only takes one condition at a time</li>
 </ul>
-<p>Run: <code>R &lt;- SELECT A &gt;= 1 FROM A</code><br />
-<code>S &lt;- SELECT A &gt; B FROM A</code></p>
+<p>Run: <code>R &lt;- SELECT a &gt;= 1 FROM A</code><br />
+<code>S &lt;- SELECT a &gt; b FROM A</code></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-class="invert" data-background-color="black" data-theme="gaia" class="invert" style="--class:invert;--background-color:black;--theme:gaia;background-color:black;background-image:none;">
 <h3>PROJECTION</h3>
@@ -213,7 +213,7 @@ Run: <code>LOAD B</code>, <code>LIST TABLES</code></p>
 <ul>
 <li>naturally all columns should be present in the original table</li>
 </ul>
-<p>Run: <code>C &lt;- PROJECT C FROM A</code></p>
+<p>Run: <code>C &lt;- PROJECT c FROM A</code></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-class="invert" data-background-color="black" data-theme="gaia" class="invert" style="--class:invert;--background-color:black;--theme:gaia;background-color:black;background-image:none;">
 <h3>DISTINCT*</h3>
@@ -234,7 +234,7 @@ Run: <code>LOAD B</code>, <code>LIST TABLES</code></p>
 <ul>
 <li>Implicitly assumes &lt;column1&gt; is from &lt;table1&gt; and &lt;column2&gt; if from &lt;table2&gt;</li>
 </ul>
-<p>Example: <code>J &lt;- JOIN A, B ON A == A</code></p>
+<p>Example: <code>J &lt;- JOIN A, B ON a == a</code></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-class="invert" data-background-color="black" data-theme="gaia" class="invert" style="--class:invert;--background-color:black;--theme:gaia;background-color:black;background-image:none;">
 <h3>SORT*</h3>
@@ -242,7 +242,7 @@ Run: <code>LOAD B</code>, <code>LIST TABLES</code></p>
 <pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-attribute">&lt;new_table_name&gt;</span> <span class="hljs-attribute">&lt;- SORT &lt;table_name&gt;</span> BY <span class="hljs-attribute">&lt;column_name&gt;</span> IN <span class="hljs-attribute">&lt;sorting_order&gt;</span>
 </span></span></foreignObject></svg></code></pre>
 <p>Where &lt;sorting_order&gt; can be <code>ASC</code> or <code>DESC</code></p>
-<p>Example: <code>S &lt;- SORT A BY B IN ASC</code></p>
+<p>Example: <code>S &lt;- SORT A BY b IN ASC</code></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-class="invert" data-background-color="black" data-theme="gaia" class="invert" style="--class:invert;--background-color:black;--theme:gaia;background-color:black;background-image:none;">
 <h3>SOURCE</h3>
@@ -276,7 +276,7 @@ Run: <code>LOAD B</code>, <code>LIST TABLES</code></p>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" data-class="invert" data-background-color="black" data-theme="gaia" class="invert" style="--class:invert;--background-color:black;--theme:gaia;background-color:black;background-image:none;">
 <h3>Command Execution Flow</h3>
 <p><img src="flow.png" alt="" /></p>
-<p>Run: <code>LOAD a</code> with debugger</p>
+<p>Run: <code>LOAD A</code> with debugger</p>
 <p>see: load.cpp</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-class="invert" data-background-color="black" data-theme="gaia" class="invert" style="--class:invert;--background-color:black;--theme:gaia;background-color:black;background-image:none;">
@@ -294,9 +294,9 @@ Run: <code>LOAD B</code>, <code>LIST TABLES</code></p>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28" data-class="invert" data-background-color="black" data-theme="gaia" class="invert" style="--class:invert;--background-color:black;--theme:gaia;background-color:black;background-image:none;">
 <h3>Executors</h3>
 <p>Every command(COMMAND) has a file in the executors directory, within that directory you'll find 3 functions</p>
-<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-title">syntacticParseCOMMAND</span><span class="hljs-params">()</span></span>
-<span class="hljs-function"><span class="hljs-title">semanticParseCOMMAND</span><span class="hljs-params">()</span></span>
-<span class="hljs-function"><span class="hljs-title">executeCOMMAND</span><span class="hljs-params">()</span></span>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-attribute">syntacticParseCOMMAND
+semanticParseCOMMAND
+executeCOMMAND</span>
 </span></span></foreignObject></svg></code></pre>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29" data-class="invert" data-background-color="black" data-theme="gaia" class="invert" style="--class:invert;--background-color:black;--theme:gaia;background-color:black;background-image:none;">
@@ -320,7 +320,7 @@ Run: <code>LOAD B</code>, <code>LIST TABLES</code></p>
 <h3>Cursors</h3>
 <p>A cursor is an object that acts like a pointer in a table. To read from a table, you need to declare a cursor.</p>
 <p><img src="cursor.png" alt="" /></p>
-<p>Run: <code>R &lt;- SELECT A == 1 FROM a</code> with debugger</p>
+<p>Run: <code>R &lt;- SELECT a == 1 FROM A</code> with debugger</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32" data-class="invert" data-background-color="black" data-theme="gaia" class="invert" style="--class:invert;--background-color:black;--theme:gaia;background-color:black;background-image:none;">
 <h3>Logger</h3>
@@ -360,7 +360,7 @@ Run: <code>LOAD B</code>, <code>LIST TABLES</code></p>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36" data-class="invert" data-background-color="black" data-theme="gaia" class="invert" style="--class:invert;--background-color:black;--theme:gaia;background-color:black;background-image:none;">
 <h2>References</h2>
 <ul>
-<li>GitHub Repo - <a href="https://github.com/Jayitha/SimpleRA">SimpleRA</a></li>
+<li>GitHub Repo - <a href="https://github.com/SimpleRA/SimpleRA">SimpleRA</a></li>
 <li>Build and run instructions will be provided later</li>
 </ul>
 </section>
