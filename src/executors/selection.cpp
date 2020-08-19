@@ -109,7 +109,6 @@ void executeSELECTION()
 
     Table table = *tableCatalogue.getTable(parsedQuery.selectionRelationName);
     Table* resultantTable = new Table(parsedQuery.selectionResultRelationName, table.columns);
-    resultantTable->writeRow<string>(resultantTable -> columns);
     Cursor cursor = table.getCursor();
     vector<int> row = cursor.getNext();
     int firstColumnIndex = table.getColumnIndex(parsedQuery.selectionFirstColumnName);

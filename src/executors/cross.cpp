@@ -75,8 +75,6 @@ void executeCROSS()
 
     Table *resultantTable = new Table(parsedQuery.crossResultRelationName, columns);\
 
-    resultantTable->writeRow<string>(columns);
-
     Cursor cursor1 = table1.getCursor();
     Cursor cursor2 = table2.getCursor();
 

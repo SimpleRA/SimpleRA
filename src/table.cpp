@@ -39,6 +39,7 @@ Table::Table(string tableName, vector<string> columns)
     this->columns = columns;
     this->columnCount = columns.size();
     this->maxRowsPerBlock = (uint)((BLOCK_SIZE * 1000) / (32 * columnCount));
+    this->writeRow<string>(columns);
 }
 
 /**
