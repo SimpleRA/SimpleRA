@@ -36,7 +36,7 @@ Post compilation, an executable names ```server``` will be created in the ```src
 
 
 ## Git tutorials
-[Basic github tutorial](https://youtu.be/SWYqp7iY_Tc)
-[Handling git merge conflicts](https://youtu.be/JtIX3HJKwfo)
-[What is git stash?](https://youtu.be/KLEDKgMmbBI)
-[The best way is documentation itself](https://docs.github.com/en)
+- [Basic github tutorial](https://youtu.be/SWYqp7iY_Tc)
+- [Handling git merge conflicts](https://youtu.be/JtIX3HJKwfo)
+- [What is git stash?](https://youtu.be/KLEDKgMmbBI)
+- [The best way is documentation itself](https://docs.github.com/en)
