@@ -33,6 +33,7 @@ Post compilation, an executable names ```server``` will be created in the ```src
 - To set it as upstream type ```git remote add upstream https://github.com/SimpleRA/SimpleRA.git```.
 - Now it will be added as upstream.
 - To fetch the changes made by TA's just type ```git pull upstream master --allow-unrelated-histories``` .
+- Manually merge conflicts if there are any !!
 
 
 ## Git tutorials
