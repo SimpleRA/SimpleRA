@@ -1,15 +1,5 @@
 # SimpleRA
 
-## Getting the source code
-
-If a repository hasn't yet been created for you, you can get the source code from the public repository (https://github.com/SimpleRA/SimpleRA.git). In your local system, run the following command
-
-```
-git clone https://github.com/SimpleRA/SimpleRA.git SimpleRA
-```
-
-This will download all the source files into a directory called "SimpleRA"
-
 ## Compilation Instructions
 
 We use ```make``` to compile all the files and creste the server executable. ```make``` is used primarily in Linux systems, so those of you who want to use Windows will probably have to look up alternatives (I hear there are ways to install ```make``` on Windows). To compile
@@ -34,3 +24,19 @@ Post compilation, an executable names ```server``` will be created in the ```src
 ```
 ./server
 ```
+## To setup your Git Repository
+- Join the course github organisation using the invite link.
+- Join or create a team corresponding to your team name on the organisation.
+- Your repository will be initialised with a template code on succesful authorisation.
+- Now clone your personal repo using ```git clone "your repo link"```.
+- After you have cloned your repo to your system add the main repo as an upstream to your repo so whenever a change is pushed by TA's you can access it.
+- To set it as upstream type ```git remote add upstream https://github.com/SimpleRA/SimpleRA.git```.
+- Now it will be added as upstream.
+- To fetch the changes made by TA's just type ```git pull upstream master --allow-unrelated-histories``` .
+
+
+## Git tutorials
+[Basic github tutorial](https://youtu.be/SWYqp7iY_Tc)
+[Handling git merge conflicts](https://youtu.be/JtIX3HJKwfo)
+[What is git stash?](https://youtu.be/KLEDKgMmbBI)
+[The best way is documentation itself](https://docs.github.com/en)
