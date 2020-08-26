@@ -41,3 +41,9 @@ Post compilation, an executable names ```server``` will be created in the ```src
 - [Handling git merge conflicts](https://youtu.be/JtIX3HJKwfo)
 - [What is git stash?](https://youtu.be/KLEDKgMmbBI)
 - [The best way is documentation itself](https://docs.github.com/en)
+
+## Instructions for Creating a Pull Request
+- First fork the repo from the main code repository.
+- Then commit your changes to this forked repository.
+- To create a pull request go to the main repository and click on the pull request option.
+- Kindly only submit your pull requests to the branch **student-pull-requests** only. We won't entertain pull requests to master branch.
