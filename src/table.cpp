@@ -38,7 +38,7 @@ Table::Table(string tableName, vector<string> columns)
     this->tableName = tableName;
     this->columns = columns;
     this->columnCount = columns.size();
-    this->maxRowsPerBlock = (uint)((BLOCK_SIZE * 1000) / (32 * columnCount));
+    this->maxRowsPerBlock = (uint)((BLOCK_SIZE * 1000) / (4 * columnCount));
     this->writeRow<string>(columns);
 }
 
@@ -145,6 +145,7 @@ bool Table::blockify()
     if (this->rowCount == 0)
         return false;
     this->distinctValuesInColumns.clear();
+    fin.close();
     return true;
 }
 
