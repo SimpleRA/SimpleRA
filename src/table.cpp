@@ -38,7 +38,7 @@ Table::Table(string tableName, vector<string> columns)
     this->tableName = tableName;
     this->columns = columns;
     this->columnCount = columns.size();
-    this->maxRowsPerBlock = (uint)((BLOCK_SIZE * 1000) / (32 * columnCount));
+    this->maxRowsPerBlock = (uint)((BLOCK_SIZE * 1000) / (4 * columnCount));
     this->writeRow<string>(columns);
 }
 
@@ -90,7 +90,7 @@ bool Table::extractColumnNames(string firstLine)
         this->columns.emplace_back(word);
     }
     this->columnCount = this->columns.size();
-    this->maxRowsPerBlock = (uint)((BLOCK_SIZE * 1000) / (32 * this->columnCount));
+    this->maxRowsPerBlock = (uint)((BLOCK_SIZE * 1000) / (4 * this->columnCount));
     return true;
 }
 
