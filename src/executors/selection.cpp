@@ -132,6 +132,7 @@ void executeSELECTION()
         tableCatalogue.insertTable(resultantTable);
     else{
         cout<<"Empty Table"<<endl;
+        resultantTable->unload();
         delete resultantTable;
     }
     return;
