@@ -15,12 +15,12 @@ bool syntacticParseSORT(){
     }
     parsedQuery.queryType = SORT;
     parsedQuery.sortResultRelationName = tokenizedQuery[0];
-    parsedQuery.sortColumnName = tokenizedQuery[3];
-    parsedQuery.sortRelationName = tokenizedQuery[5];
-    string sortingStrateg = tokenizedQuery[7];
-    if(sortingStrateg == "ASC")
+    parsedQuery.sortRelationName = tokenizedQuery[3];
+    parsedQuery.sortColumnName = tokenizedQuery[5];
+    string sortingStrategy = tokenizedQuery[7];
+    if(sortingStrategy == "ASC")
         parsedQuery.sortingStrategy = ASC;
-    else if(sortingStrateg == "DESC")
+    else if(sortingStrategy == "DESC")
         parsedQuery.sortingStrategy = DESC;
     else{
         cout<<"SYNTAX ERROR"<<endl;
