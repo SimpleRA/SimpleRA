@@ -15,8 +15,8 @@ bool syntacticParseSORT(){
     }
     parsedQuery.queryType = SORT;
     parsedQuery.sortResultRelationName = tokenizedQuery[0];
-    parsedQuery.sortColumnName = tokenizedQuery[3];
-    parsedQuery.sortRelationName = tokenizedQuery[5];
+    parsedQuery.sortColumnName = tokenizedQuery[5];
+    parsedQuery.sortRelationName = tokenizedQuery[3];
     string sortingStrateg = tokenizedQuery[7];
     if(sortingStrateg == "ASC")
         parsedQuery.sortingStrategy = ASC;
